@@ -6,15 +6,10 @@ public:
         for(int i=0; i<nums.size(); i++){
             if(nums[i] == 1){
                 current_max++;
-                
-                if(i==nums.size()-1){
-                    maxi = max(current_max, maxi);
-                }
-
             }else{
-                maxi = max(current_max, maxi);
                 current_max = 0;
             }
+            maxi = max(current_max, maxi);
         }
 
         return maxi;
